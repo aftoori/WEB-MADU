@@ -1,3 +1,7 @@
+/* ===============================
+   ✨ CSS UTAMA (seperti sebelumnya)
+   =============================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +17,7 @@ body {
 /* HEADER */
 header {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -114,12 +118,12 @@ nav a:hover {
 /* PRODUK */
 .produk {
   text-align: center;
-  padding: 80px 60px; /* lebih lega dari 70px 40px */
+  padding: 80px 60px;
   background: #fff;
 }
 
 .produk h2 {
-  margin-bottom: 50px; /* tambahkan jarak judul ke daftar produk */
+  margin-bottom: 50px;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -128,22 +132,21 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 90px 100px; /* 💡 tambahkan jarak horizontal & vertikal antar produk */
+  gap: 90px 100px;
 }
 
 .produk-item {
   background: #fff8e1;
   border-radius: 15px;
-  padding: 50px; /* sedikit lebih luas */
-  width: 250px; /* lebih besar sedikit agar proporsional */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 50px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
 .produk-item:hover {
   transform: translateY(-6px);
 }
-
 
 .produk-item img {
   width: 100%;
@@ -184,19 +187,20 @@ nav a:hover {
 .alasan-item {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .alasan img {
-  width: 30px;
-  margin-bottom: 10px;
+  width: 40px;
 }
 
+/* TESTIMONI */
 .testimoni {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 150px;
-  flex-wrap: nowrap; /* biar tetap sejajar horizontal */
+  flex-wrap: nowrap;
   margin-top: 30px;
 }
 
@@ -220,29 +224,11 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* ✅ Kecilkan foto peternakan */
 .testi-right img {
-  width: 350px;      /* ubah ukuran di sini kalau mau lebih kecil/larger */
+  width: 350px;
   border-radius: 15px;
   object-fit: cover;
 }
-
-/* 📱 Responsif biar di HP tetap rapi */
-@media (max-width: 768px) {
-  .testimoni {
-    flex-wrap: wrap;
-  }
-
-  .testi-left {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .testi-right img {
-    width: 100%;
-  }
-}
-
 
 /* ARTIKEL */
 .artikel {
@@ -265,13 +251,9 @@ nav a:hover {
   border-radius: 15px;
   padding: 20px;
   max-width: 900px;
-  height: 200px;
+  height: auto;
   margin: 0 auto 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.artikel-item p {
-  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .artikel-item img {
@@ -301,4 +283,101 @@ footer {
 footer .copyright {
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* =====================================
+   📱 RESPONSIVE DESIGN UNTUK MOBILE
+   ===================================== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn-login {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .produk-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .produk-item {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .alasan {
+    gap: 60px;
+  }
+
+  .alasan-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimoni {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .testi-left {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testi-right img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .artikel-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .artikel-item img {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
