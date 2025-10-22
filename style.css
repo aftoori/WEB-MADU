@@ -342,6 +342,15 @@ footer .copyright {
   .alasan-item {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ✅ Pastikan gambar tetap muncul di mode mobile */
+  .alasan-item img {
+    width: 60px;          /* perbesar agar tetap terlihat */
+    display: block;       /* pastikan tampil */
+    margin: 0 auto;       /* posisi tetap di tengah */
   }
 
   .testimoni {
